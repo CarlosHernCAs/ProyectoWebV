@@ -1,52 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>MiTienda - Productos</title>
- <link rel="stylesheet" href="css/style-pp.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiTienda - Productos</title>
+  <link rel="stylesheet" href="css/style-pp.css">
 </head>
-
 <body>
- <header class="header">
-  <div class="container">
-   <div class="logo">MiTienda</div>
-   <nav class="nav">
-    <a href="index.html">Incio</a>
-    <a href="productos.html" class="active">Productos</a>
-    <a href="preview.html">Vista previa</a>
-    <a href="pago.html">Pago</a>
-    <a href="contacto.html">Contacto</a>
-   </nav>
-  </div>
- </header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">MiTienda</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html" class="active">Productos</a>
+        <a href="preview.html">Vista previa</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="pago.html">Pago</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
- <section class="productos">
-  <h2>Nuestros Productos</h2>
-  <div class="grid">
-   <div class="card">
-    <img src="https://via.placeholder.com/200" alt="Producto 1">
-    <h3>Producto 1</h3>
-    <p>$49.99</p>
-    <button>Comprar</button>
-   </div>
-   <div class="card">
-    <img src="https://via.placeholder.com/200" alt="Producto 2">
-    <h3>Producto 2</h3>
-    <p>$79.99</p>
-    <button>Comprar</button>
-   </div>
-   <div class="card">
-    <img src="https://via.placeholder.com/200" alt="Producto 3">
-    <h3>Producto 3</h3>
-    <p>$99.99</p>
-    <button>Comprar</button>
-   </div>
-  </div>
- </section>
+  <!-- PRODUCTOS -->
+  <section class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-box">
+      <!-- Producto 1 -->
+      <div class="producto-item">
+        <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img src="img/Electronico.png" alt="Producto 1">
+        </div>
+        <div class="producto-info">
+          <h3>Producto 1</h3>
+          <p>Descripción breve del producto.</p>
+          <p class="precio">$49.99</p>
+          <div class="producto-btns">
+            <button class="btn-preview"
+              data-title="Producto 1"
+              data-img="https://via.placeholder.com/400"
+              data-price="$49.99"
+              data-desc="Este es un producto de ejemplo con características increíbles.">
+              Vista previa
+            </button>
+            <button class="btn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
 
- <footer class="footer">
-  <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
- </footer>
+      <!-- Producto 2 -->
+      <div class="producto-item">
+        <img src="https://via.placeholder.com/120" alt="Producto 2">
+        <div class="producto-info">
+          <h3>Producto 2</h3>
+          <p>Descripción breve del producto.</p>
+          <p class="precio">$79.99</p>
+          <div class="producto-btns">
+            <button class="btn-preview"
+              data-title="Producto 2"
+              data-img="https://www.pngwing.com/es/free-png-dkhnn/download"
+              data-price="$79.99"
+              data-desc="Otro producto de ejemplo con muy buena calidad.">
+              Vista previa
+            </button>
+            <button class="btn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto-item">
+        <img src="https://via.placeholder.com/120" alt="Producto 3">
+        <div class="producto-info">
+          <h3>Producto 3</h3>
+          <p>Descripción breve del producto.</p>
+          <p class="precio">$99.99</p>
+          <div class="producto-btns">
+            <button class="btn-preview"
+              data-title="Producto 3"
+              data-img="https://via.placeholder.com/400"
+              data-price="$99.99"
+              data-desc="Producto destacado con excelente valoración de clientes.">
+              Vista previa
+            </button>
+            <button class="btn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Producto Vista">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <p id="modal-price" class="precio"></p>
+      <button class="btn">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script externo -->
+  <script src="script.js"></script>
 </body>
 </html>
