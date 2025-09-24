@@ -1,7 +1,4 @@
-/* ======================
-   CONTACTO
-====================== */
-.contacto {
+.pago {
   padding: 80px 20px;
   background: linear-gradient(135deg, #f0f4ff, #e6ecf5);
   display: flex;
@@ -9,7 +6,46 @@
   align-items: center;
 }
 
-.contacto h2 {
+.header {
+  background: linear-gradient(135deg, #0077ff, #004aad);
+  color: #fff;
+  padding: 18px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffdd57;
+  border-bottom: 2px solid #ffdd57;
+}
+
+.pago h2 {
   font-size: 32px;
   margin-bottom: 10px;
   color: #0056b3;
@@ -17,7 +53,7 @@
   letter-spacing: 1px;
 }
 
-.contacto p {
+.pago p {
   max-width: 650px;
   margin: 0 auto 40px auto;
   font-size: 16px;
@@ -25,12 +61,12 @@
   text-align: center;
 }
 
-/* Caja de formulario estilo "glassmorphism" */
-.form-contacto {
+/*formulario */
+.form-pago {
   max-width: 600px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -40,15 +76,14 @@
   animation: fadeIn 0.8s ease;
 }
 
-.form-contacto label {
+.form-pago label {
   font-weight: 600;
   color: #222;
   margin-bottom: 6px;
   font-size: 14px;
 }
 
-.form-contacto input,
-.form-contacto textarea {
+.form-pago input {
   padding: 14px 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -58,20 +93,14 @@
   transition: all 0.3s ease;
 }
 
-.form-contacto input:focus,
-.form-contacto textarea:focus {
+.form-pago input:focus {
   border-color: #0077ff;
   box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
   outline: none;
 }
 
-.form-contacto textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-/* Botón moderno */
-.form-contacto button {
+/* Botón */
+.form-pago button {
   background: linear-gradient(135deg, #0077ff, #004aad);
   color: #fff;
   border: none;
@@ -85,67 +114,33 @@
   box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
 }
 
-.form-contacto button:hover {
+.form-pago button:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 6px 18px rgba(0, 119, 255, 0.4);
 }
+/* FOOTER */
 
-/* Animación sutil */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ======================
-   FOOTER
-====================== */
 .footer {
   background: #222;
   color: #ccc;
   text-align: center;
-  padding: 25px 10px;
+  padding: 30px 15px;
   font-size: 14px;
-  margin-top: 40px;
-}
-.footer a {
-  color: #fff;
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-.footer a:hover {
-  color: #0077ff;
+  margin-top: 60px;
+  border-top: 3px solid #0077ff;
 }
 
-/* ======================
-   HEADER
-====================== */
-.header {
-  background: #0077ff;
-  color: #fff;
-  padding: 18px;
+.footer p {
+  margin-bottom: 10px;
 }
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-.nav a {
-  color: #fff;
+
+.footer a {
+  color: #ffdd57;
   text-decoration: none;
-  margin: 0 12px;
-  font-size: 15px;
+  font-weight: 500;
   transition: color 0.2s;
 }
-.nav a:hover {
-  color: #ddd;
+
+.footer a:hover {
+  color: #fff;
 }
