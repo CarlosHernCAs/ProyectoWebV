@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiTienda - Pago</title>
+  <link rel="stylesheet" href="css/styles-pago.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">MiTienda</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="preview.html">Vista previa</a>
+        <a href="pago.html" class="active">Pago</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pago">
+    <h2>Formulario de Pago</h2>
+    <form class="form-pago">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Juan Pérez" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+
+      <label for="direccion">Dirección de envío</label>
+      <input type="text" id="direccion" placeholder="Av. Siempre Viva 123" required>
+
+      <label for="tarjeta">Número de tarjeta</label>
+      <input type="text" id="tarjeta" placeholder="1111-2222-3333-4444" required>
+
+      <label for="exp">Fecha de expiración</label>
+      <input type="text" id="exp" placeholder="MM/AA" required>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" required>
+
+      <button type="submit">Pagar</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
