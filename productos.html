@@ -7,6 +7,43 @@
   <link rel="stylesheet" href="css/style-pp.css">
 </head>
 <body>
+
+ <header class="header">
+  <div class="container">
+   <div class="logo">MiTienda</div>
+   <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html" class="active">Productos</a>
+    <a href="preview.html">Vista previa</a>
+    <a href="pago.html">Pago</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#" id="verCarrito">🛒 Carrito (<span id="cantidad">0</span>)</a>
+   </nav>
+  </div>
+ </header>
+
+ <section class="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="grid">
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 1">
+    <h3>Producto 1</h3>
+    <p class="precio">$49.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 2">
+    <h3>Producto 2</h3>
+    <p class="precio">$79.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 3">
+    <h3>Producto 3</h3>
+    <p class="precio">$99.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+
   <!-- HEADER -->
   <header class="header">
     <div class="container">
@@ -166,13 +203,70 @@
       <p id="modal-price" class="precio"></p>
       <button class="btn">Agregar al carrito</button>
     </div>
+
   </div>
 
+
+ <div id="carritoModal" style="display:none; position:fixed; top:20%; left:30%; background:white; padding:20px; border:1px solid #ccc;">
+   <h2>Carrito</h2>
+   <ul id="listaCarrito"></ul>
+   <p><strong>Total:</strong> $<span id="total">0</span></p>
+   <button onclick="cerrarCarrito()">Cerrar</button>
+ </div>
+
+ <footer class="footer">
+  <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+ </footer>
+
+ <script>
+ let carrito = [];
+
+ document.querySelectorAll(".comprar").forEach((btn, index) => {
+   btn.addEventListener("click", () => {
+     const card = btn.parentElement;
+     const nombre = card.querySelector("h3").innerText;
+     const precioTexto = card.querySelector(".precio").innerText.replace("$", "");
+     const precio = parseFloat(precioTexto);
+     carrito.push({ nombre, precio });
+     actualizarCarrito();
+   });
+ });
+
+ function actualizarCarrito() {
+   document.getElementById("cantidad").innerText = carrito.length;
+   localStorage.setItem("carrito", JSON.stringify(carrito));
+ }
+
+ document.getElementById("verCarrito").addEventListener("click", () => {
+   const lista = document.getElementById("listaCarrito");
+   lista.innerHTML = "";
+   let total = 0;
+   carrito.forEach(item => {
+     const li = document.createElement("li");
+     li.textContent = `${item.nombre} - $${item.precio}`;
+     lista.appendChild(li);
+     total += item.precio;
+   });
+   document.getElementById("total").innerText = total.toFixed(2);
+   document.getElementById("carritoModal").style.display = "block";
+ });
+
+ function cerrarCarrito() {
+   document.getElementById("carritoModal").style.display = "none";
+ }
+
+ window.onload = () => {
+   const guardado = localStorage.getItem("carrito");
+   if (guardado) {
+     carrito = JSON.parse(guardado);
+     actualizarCarrito();
+   }
+ }
+ </script>
   <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
   </footer>
-
   <!-- Script externo -->
   <script src="script.js"></script>
 </body>
