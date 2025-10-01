@@ -7,6 +7,43 @@
   <link rel="stylesheet" href="css/style-pp.css">
 </head>
 <body>
+
+ <header class="header">
+  <div class="container">
+   <div class="logo">MiTienda</div>
+   <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html" class="active">Productos</a>
+    <a href="preview.html">Vista previa</a>
+    <a href="pago.html">Pago</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#" id="verCarrito">🛒 Carrito (<span id="cantidad">0</span>)</a>
+   </nav>
+  </div>
+ </header>
+
+ <section class="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="grid">
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 1">
+    <h3>Producto 1</h3>
+    <p class="precio">$49.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 2">
+    <h3>Producto 2</h3>
+    <p class="precio">$79.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+   <div class="card">
+    <img src="https://via.placeholder.com/200" alt="Producto 3">
+    <h3>Producto 3</h3>
+    <p class="precio">$99.99</p>
+    <button class="comprar">Comprar</button>
+   </div>
+
   <!-- HEADER -->
   <header class="header">
     <div class="container">
@@ -32,9 +69,9 @@
         <img src="img/Electronico.png" alt="Producto 1">
         </div>
         <div class="producto-info">
-          <h3>Producto 1</h3>
-          <p>Descripción breve del producto.</p>
-          <p class="precio">$49.99</p>
+          <h3>Mystery box</h3>
+          <p>Puede tocarte cualquiera de los articulos en la imagen.</p>
+          <p class="precio">$149.99</p>
           <div class="producto-btns">
             <button class="btn-preview"
               data-title="Producto 1"
@@ -51,15 +88,19 @@
 
       <!-- Producto 2 -->
       <div class="producto-item">
+        <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img src="img/Mouse.png" alt="Producto 2">
+        </div>
 
 
         <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
         <img src="img/Mouse.png" alt="Producto 2">
         </div>
         <div class="producto-info">
-          <h3>Producto 2</h3>
-          <p>Descripción breve del producto.</p>
-          <p class="precio">$79.99</p>
+          
+          <h3>Mouse Logitech</h3>
+          <p>Mouse Logitech G203 Blanco.</p>
+          <p class="precio">$49.99</p>
           <div class="producto-btns">
             <button class="btn-preview"
               data-title="Producto 2"
@@ -76,13 +117,17 @@
 
       <!-- Producto 3 -->
       <div class="producto-item">
+
+        <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img src="img/Celular.png" alt="Producto 3">
+        </div>
         <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
         <img src="img/Celular.png" alt="Producto 3">
         </div>
         <div class="producto-info">
-          <h3>Producto 3</h3>
-          <p>Descripción breve del producto.</p>
-          <p class="precio">$99.99</p>
+          <h3>Iphone 15 Pro Max.</h3>
+          <p>Almacenamiento de 256GB, procesador M3 pro max.</p>
+          <p class="precio">$999.99</p>
           <div class="producto-btns">
             <button class="btn-preview"
               data-title="Producto 3"
@@ -95,15 +140,14 @@
           </div>
         </div>
       </div>
-
       <!-- Producto 4 -->
       <div class="producto-item">
         <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
         <img src="img/Laptop.png" alt="Producto 4">
         </div>
         <div class="producto-info">
-          <h3>Producto 4</h3>
-          <p>Descripción breve del producto.</p>
+          <h3>Laptop ROG G16</h3>
+          <p>Procesador i7 12800HX - 16GB RAM - 512GB SSD.</p>
           <p class="precio">$399.99</p>
           <div class="producto-btns">
             <button class="btn-preview"
@@ -124,8 +168,30 @@
         <img src="img/Play.png" alt="Producto 5">
         </div>
         <div class="producto-info">
-          <h3>Producto 5</h3>
-          <p>Descripción breve del producto.</p>
+          <h3>Play Station 5</h3>
+          <p>Slim con lectora de disco y un mando viene con 2 juegos gratis 1Tb de almacenamiento.</p>
+          <p class="precio">$549.99</p>
+          <div class="producto-btns">
+            <button class="btn-preview"
+              data-title="Producto 3"
+              data-img="img/Play.png"
+              data-price="$549.99"
+              data-desc="Producto destacado con excelente valoración de clientes.">
+              Vista previa
+            </button>
+            <button class="btn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+       <div class="producto-item">
+        <div class="producto-img" Style="width: 120px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img src="img/Teclado.png" alt="Producto 5">
+        </div>
+        <div class="producto-info">
+          <h3>Play Station 5</h3>
+          <p>Slim con lectora de disco y un mando viene con 2 juegos gratis 1Tb de almacenamiento.</p>
           <p class="precio">$549.99</p>
           <div class="producto-btns">
             <button class="btn-preview"
@@ -152,13 +218,70 @@
       <p id="modal-price" class="precio"></p>
       <button class="btn">Agregar al carrito</button>
     </div>
+
   </div>
 
+
+ <div id="carritoModal" style="display:none; position:fixed; top:20%; left:30%; background:white; padding:20px; border:1px solid #ccc;">
+   <h2>Carrito</h2>
+   <ul id="listaCarrito"></ul>
+   <p><strong>Total:</strong> $<span id="total">0</span></p>
+   <button onclick="cerrarCarrito()">Cerrar</button>
+ </div>
+
+ <footer class="footer">
+  <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+ </footer>
+
+ <script>
+ let carrito = [];
+
+ document.querySelectorAll(".comprar").forEach((btn, index) => {
+   btn.addEventListener("click", () => {
+     const card = btn.parentElement;
+     const nombre = card.querySelector("h3").innerText;
+     const precioTexto = card.querySelector(".precio").innerText.replace("$", "");
+     const precio = parseFloat(precioTexto);
+     carrito.push({ nombre, precio });
+     actualizarCarrito();
+   });
+ });
+
+ function actualizarCarrito() {
+   document.getElementById("cantidad").innerText = carrito.length;
+   localStorage.setItem("carrito", JSON.stringify(carrito));
+ }
+
+ document.getElementById("verCarrito").addEventListener("click", () => {
+   const lista = document.getElementById("listaCarrito");
+   lista.innerHTML = "";
+   let total = 0;
+   carrito.forEach(item => {
+     const li = document.createElement("li");
+     li.textContent = `${item.nombre} - $${item.precio}`;
+     lista.appendChild(li);
+     total += item.precio;
+   });
+   document.getElementById("total").innerText = total.toFixed(2);
+   document.getElementById("carritoModal").style.display = "block";
+ });
+
+ function cerrarCarrito() {
+   document.getElementById("carritoModal").style.display = "none";
+ }
+
+ window.onload = () => {
+   const guardado = localStorage.getItem("carrito");
+   if (guardado) {
+     carrito = JSON.parse(guardado);
+     actualizarCarrito();
+   }
+ }
+ </script>
   <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
   </footer>
-
   <!-- Script externo -->
   <script src="script.js"></script>
 </body>
