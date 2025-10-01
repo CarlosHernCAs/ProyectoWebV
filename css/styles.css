@@ -151,3 +151,114 @@ body {
   font-size: 14px;
   color: #555;
 }
+/* ======================
+   BANNER PROMOCIONAL
+====================== */
+.banner {
+  background: linear-gradient(135deg, #516bff, #0f2a9e);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 40px 0;
+  border-radius: 12px;
+}
+.banner h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ======================
+   CATEGORÍAS
+====================== */
+.categorias {
+  text-align: center;
+  padding: 60px 20px;
+}
+.categorias h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #0056b3;
+}
+.cat-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.cat-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ======================
+   OPINIONES
+====================== */
+.opiniones {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.opiniones h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #0056b3;
+}
+.opinion {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-style: italic;
+  color: #444;
+}
+.opinion span {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+/* ======================
+   NEWSLETTER
+====================== */
+.newsletter {
+  background: #0077ff;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 40px;
+}
+.newsletter form {
+  margin-top: 15px;
+}
+.newsletter input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 10px;
+}
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #0077ff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.newsletter button:hover {
+  background: #ddd;
+}
