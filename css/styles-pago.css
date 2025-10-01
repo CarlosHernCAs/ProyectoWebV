@@ -1,0 +1,146 @@
+.pago {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0f4ff, #e6ecf5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background: linear-gradient(135deg, #0077ff, #004aad);
+  color: #fff;
+  padding: 18px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffdd57;
+  border-bottom: 2px solid #ffdd57;
+}
+
+.pago h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #0056b3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pago p {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/*formulario */
+.form-pago {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+.form-pago label {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-pago input {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-pago input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
+  outline: none;
+}
+
+/* Botón */
+.form-pago button {
+  background: linear-gradient(135deg, #0077ff, #004aad);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+}
+
+.form-pago button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 119, 255, 0.4);
+}
+/* FOOTER */
+
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top: 3px solid #0077ff;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
